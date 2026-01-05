@@ -3,8 +3,9 @@
 
 
 ## TODOList
-1. demo/mcp_server: 用国内模型openapi替换client的部分
-
+1. DONE: demo/mcp_server: 用国内模型openapi替换client的部分。可以参看mcp_chatbot_deepseek.py
+    * (https://api-docs.deepseek.com/zh-cn/guides/anthropic_api)
+2. deepseek/hunyuan: 构建chat，tool的最小demo。
 
 ## 教程
 
