@@ -17,6 +17,10 @@
 * [ChatGPT Prompt Engineering for Developers](https://learn.deeplearning.ai/courses/chatgpt-prompt-eng/lesson/dfbds/introduction)
     * doc/prompt_notes.md
 
+### Agent
+* [Hello-Agnets](https://datawhalechina.github.io/hello-agents/#/./README)
+    * tutorial/hello_agents
+
 ## 资源
 * MCP Server:
     * https://github.com/modelcontextprotocol/servers
