@@ -21,6 +21,11 @@
 * [Hello-Agnets](https://datawhalechina.github.io/hello-agents/#/./README)
     * tutorial/hello_agents
 
+## Toy Demo
+* openapi:
+    * demo/openapi
+
+
 ## 资源
 * MCP Server:
     * https://github.com/modelcontextprotocol/servers
