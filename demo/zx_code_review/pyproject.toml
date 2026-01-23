@@ -1,0 +1,11 @@
+[project]
+name = "zx-code-review"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ast-comments>=1.2.3",
+    "hello-agents[all]>=0.2.8",
+    "openai>=1.109.1",
+]
