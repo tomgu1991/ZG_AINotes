@@ -1,0 +1,62 @@
+[
+    {
+        "method_line": 60,
+        "method_name": "getOLSRegression(double[][])",
+        "result": true,
+        "code": "result[1] = sxy / sxx;",
+        "explanation": "除零错误：在第84行，变量sxx可能为0，导致除法运算异常。sxx的计算公式为sumXX - (sumX * sumX) / n，当所有x值相同时，sxx会等于0。",
+        "possibility": 0.7
+    },
+    {
+        "method_line": 104,
+        "method_name": "getOLSRegression(XYDataset)",
+        "result": true,
+        "code": "result[1] = sxy / sxx;",
+        "explanation": "除零错误：在第129行，变量sxx可能为0，导致除法运算异常。sxx = sumXX - (sumX * sumX) / n，当所有x值相等时，sumXX = (sumX * sumX) / n，导致sxx = 0。",
+        "possibility": 0.7
+    },
+    [
+        {
+            "method_line": 147,
+            "method_name": "getPowerRegression(double[][])",
+            "result": true,
+            "code": "result[1] = sxy / sxx;",
+            "explanation": "除零错误：在第173行，变量sxx可能为0，导致除法运算异常。sxx = sumXX - (sumX * sumX) / n，当所有x值相同时，sumXX = (sumX * sumX) / n，使得sxx = 0。",
+            "possibility": 0.7
+        }
+    ],
+    {
+        "method_line": 191,
+        "method_name": "getPowerRegression(XYDataset)",
+        "result": true,
+        "code": "result[1] = sxy / sxx;",
+        "explanation": "除零错误：在第219行，变量sxx可能为0，导致除法运算异常。sxx的计算公式为sumXX - (sumX * sumX) / n，当所有x值相等时，sxx会等于0。",
+        "possibility": 0.4
+    },
+    [
+        {
+            "method_line": 242,
+            "method_name": "getPolynomialRegression(XYDataset)",
+            "result": true,
+            "code": "result[eq] = value / matrix[eq][eq];",
+            "explanation": "除零错误：在第296行，存在除法运算 value / matrix[eq][eq]，其中除数 matrix[eq][eq] 可能为零。matrix[eq][eq] 来自矩阵计算，当数据点共线或存在数值问题时可能导致对角线元素为零。",
+            "possibility": 0.4
+        },
+        {
+            "method_line": 242,
+            "method_name": "getPolynomialRegression(XYDataset)",
+            "result": true,
+            "code": "double rSquare = yRegSquare / yObsSquare;",
+            "explanation": "除零错误：在第304行，存在除法运算 yRegSquare / yObsSquare，其中除数 yObsSquare 可能为零。当所有数据点的 y 值都等于均值 meanY 时，yObsSquare 为零，导致除零异常。",
+            "possibility": 0.3
+        }
+    ],
+    {
+        "method_line": 319,
+        "method_name": "calculateSubMatrix(double[][])",
+        "result": true,
+        "code": "double factor = matrix[0][0] / matrix[eq][0];",
+        "explanation": "除零错误：在第329行，存在除法运算 matrix[0][0] / matrix[eq][0]，其中除数 matrix[eq][0] 可能为零。虽然代码后面有零主元检查，但该除法发生在检查之前，当 matrix[eq][0] 为0时会立即导致除零异常。",
+        "possibility": 0.7
+    }
+]
